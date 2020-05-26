@@ -1,0 +1,31 @@
+opam-version: "2.0"
+maintainer: "Yishuai Li <yishuai@upenn.edu>"
+version: "dev"
+
+homepage: "https://github.com/liyishuai/coq-show"
+dev-repo: "git+https://github.com/liyishuai/coq-show.git"
+bug-reports: "https://github.com/liyishuai/coq-show/issues"
+license: "BSD-3-Clause"
+
+synopsis: "The Show class in Coq"
+description: """
+A clone of the Show class in Haskell."""
+
+build: [make "-j" jobs]
+run-test: [make "-j" jobs "test"]
+install: [make "-j" jobs "install"]
+depends: [
+  "coq" { >= "8.10" }
+]
+
+tags: [
+  "logpath:Show"
+]
+authors: [
+  "Leonidas Lampropoulos"
+  "Maxime Dénès"
+  "Cătălin Hrițcu"
+  "Benjamin C. Pierce"
+  "Li-yao Xia"
+  "Yishuai Li"
+]
